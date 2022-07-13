@@ -1,7 +1,7 @@
 
-import { useRef} from 'react';
+import { useRef } from 'react';
 
-const UseRefComponent= () => {
+const UseRefComponent = () => {
     const inputElement = useRef(null);
 
     const handleClick = () => {
@@ -11,13 +11,13 @@ const UseRefComponent= () => {
 
     return <>
         <h1>Using useRef</h1>
-        <ChildrenComponent inputElement={inputElement} handleClick={handleClick}/>
+        <ChildrenComponent inputElement={inputElement} handleClick={handleClick} />
     </>
 }
 
-const ChildrenComponent = ({inputElement, handleClick}) => {
+const ChildrenComponent = ({ inputElement, handleClick }) => {
     return <>
-        <input type='text' ref={inputElement} style={{width: '500px'}}/>
+        <input type='text' ref={inputElement} style={{ width: '500px' }} />
         <button onClick={() => handleClick()}>Click me</button>
     </>
 }

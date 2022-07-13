@@ -24,7 +24,6 @@ const MemoComponent = () => {
     return <>
         <header><button onClick={() => handleCounter()}>Click me</button>Increase Counter: {counter}</header>
         <h2>When you trigger the click look into console</h2>
-
         <h1>Good practice component</h1>
         {products.map((product) => <>
             <GoodComponent product={product} />

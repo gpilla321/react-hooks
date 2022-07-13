@@ -5,8 +5,8 @@ const UseMemoComponent = () => {
     const array = new Array(30).fill(5);
 
     const handleClick = () => setCounter(counter + 1)
-    
-    const totalMemoized = useMemo(() => 
+
+    const totalMemoized = useMemo(() =>
         array.reduce((a, b) => {
             console.log('Memoized calculation')
             return a + b;
