@@ -1,27 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import MemoComponent from './memoization/memo';
-import UseMemoComponent from './memoization/useMemo';
-import UseCallbackComponent from './memoization/useCallback';
-import UseRefComponent from './useRef';
-import UseReducerComponent from './useReducer';
+import MemoComponent from './hooks/memo';
+import UseMemoComponent from './hooks/useMemo';
+import UseCallbackComponent from './hooks/useCallback';
+import UseRefComponent from './hooks/useRef';
+import UseReducerComponent from './hooks/useReducer';
+import { UseContextComponent, ExampleContextProvider } from './hooks/useContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<MemoComponent />}/>
-      <Route path="/memo/" element={<MemoComponent />}/>
-      <Route path="/memo/useMemo" element={<UseMemoComponent />}/>
-      <Route path="/memo/useCallback" element={<UseCallbackComponent />}/>
-      <Route path="/useRef" element={<UseRefComponent />}/>
-      <Route path="/useReducer" element={<UseReducerComponent />}/>
-    </Routes>
-  </BrowserRouter>
+  <ExampleContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MemoComponent />} />
+        <Route path="/memo" element={<MemoComponent />} />
+        <Route path="/useMemo" element={<UseMemoComponent />} />
+        <Route path="/useCallback" element={<UseCallbackComponent />} />
+        <Route path="/useRef" element={<UseRefComponent />} />
+        <Route path="/useReducer" element={<UseReducerComponent />} />
+        <Route path="/useContext" element={<UseContextComponent />} />
+      </Routes>
+    </BrowserRouter>
+  </ExampleContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

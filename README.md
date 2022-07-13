@@ -7,9 +7,9 @@ The idea here is to create simple examples using React Hooks.
 ## Routes
 
 ```
-/memo/
-/memo/useMemo
-/memo/useCallback
+/memo
+/useMemo
+/useCallback
 /useRef
 /useReducer
 ```
