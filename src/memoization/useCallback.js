@@ -2,16 +2,13 @@ import { memo, useCallback, useState } from "react";
 
 const UseCallbackComponent = () => {
     const [counter, setCounter] = useState(0);
-    const [searchTerm, setSearchTerm] = useState([]);
-    const lookedupTerms = ['test', 'word', 'how', 'to', 'use', 'useCallback', 'hook']
 
     const handleClick = useCallback((value) => {
-        setCounter(counter + 1)
-        setSearchTerm([...searchTerm, value]);
+        setCounter(oldCounter => oldCounter + 1);
 
         console.log(counter)
         console.log(value)
-    }, lookedupTerms)
+    }, [])
 
     return <>
         <h1>useCallback</h1>
