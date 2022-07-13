@@ -6,11 +6,13 @@ The idea here is to create simple examples using React Hooks.
 
 ## Routes
 
+```
 /memo/
 /memo/useMemo
 /memo/useCallback
 /useRef
 /useReducer
+```
 
 ## Also
 On console logs I can track the re-renders and the memoization 
