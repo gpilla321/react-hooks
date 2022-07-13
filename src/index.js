@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}/>
+      <Route path="/" element={<MemoComponent />}/>
       <Route path="/memo/" element={<MemoComponent />}/>
       <Route path="/memo/useMemo" element={<UseMemoComponent />}/>
       <Route path="/memo/useCallback" element={<UseCallbackComponent />}/>
